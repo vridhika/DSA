@@ -8,12 +8,12 @@ class Solution {
             }
             else{
                 count--;
-                if(count==0){
-                    candidate=i;
-                    count++;
-                }
+            if(count==0){
+               candidate=i;
+               count++; 
             }
         }
-        return candidate;
     }
+    return candidate;
+}
 }
