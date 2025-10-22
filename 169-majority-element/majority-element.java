@@ -6,6 +6,7 @@ class Solution {
             if(i==candidate){
                 count++;
             }
+        
             else{
                 count--;
                 if(count==0){
