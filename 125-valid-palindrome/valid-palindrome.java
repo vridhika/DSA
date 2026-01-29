@@ -1,28 +1,12 @@
 class Solution {
-    boolean isAlphaNumeric(char ch){
-        if((ch>='0' && ch<='9') || (ch>='a'&& ch<='z') || (ch>='A' && ch<='Z')){
-            return true;
-        }
-        return false;
-    }
     public boolean isPalindrome(String s) {
-        int start=0;
-        int end=s.length()-1;
-        while(start<end){
-            if(!isAlphaNumeric(s.charAt(start))){
-                start++;
-                continue;
-            }
-            if(!isAlphaNumeric(s.charAt(end))){
-                end--;
-                continue;
-            }
-            if(Character.toLowerCase(s.charAt(start))!=Character.toLowerCase(s.charAt(end))){
+        s=s.toLowerCase();
+        s=s.replaceAll("[^a-z0-9]","");
+        int n=s.length();
+        for(int i=0;i<n/2;i++){
+            if(s.charAt(i)!=s.charAt(n-i-1)){
                 return false;
             }
-                start++;
-                end--;
-            
         }
         return true;
     }
