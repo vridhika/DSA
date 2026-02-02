@@ -2,7 +2,7 @@ class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int left=0;
         int right=numbers.length-1;
-        int [] res=new int[2];
+        int[] res=new int[2];
         while(left<right){
             int sum=numbers[left]+numbers[right];
             if(sum==target){
@@ -11,12 +11,12 @@ class Solution {
                 return res;
             }
             else if(sum<target){
-                left++;
+               left++;
             }
             else{
                 right--;
             }
         }
-        return res;
+         return res;
     }
 }
